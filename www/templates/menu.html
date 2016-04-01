@@ -1,0 +1,96 @@
+<ion-side-menus enable-menu-with-back-views="true" menuToggle="False" >
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-back-button class="button-clear">
+<i class="ion-arrow-left-c"></i>Back</ion-nav-back-button>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-home" ui-sref="app.home"></button>
+        <button class="button button-icon button-clear ion-android-cart" ui-sref="app.home">({{cartItems}})</button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content>
+	<a ui-sref="app.myprofile" menu-close>
+	<div class="item-image">
+	  <img src="img/logo.jpg" style="opacity: 0.9;">
+	</div>
+	<div class="dark">
+	  <font size=5><b><u>&nbsp;Sahil Sehgal</u></b></font><br>
+	    <font size=4><b>&nbsp;(Vasant Kunj) </b></font>
+	 </div>
+	</a>
+      <div menu-close class="list">
+        <div class="item item-divider">
+        </div>
+        <a class="item item-icon-left" ui-sref="app.home">
+	<i class="icon ion-home"></i>
+	Home
+        </a>
+        <a class="item item-icon-left" ui-sref="app.microsite">
+	<i class="icon ion-iphone"></i>
+	My Orders
+        </a>
+        <a class="item item-icon-left" ui-sref="app.advancebooking">
+	<i class="icon ion-compose"></i>
+	Advance Booking
+        </a>
+        <a class="item item-icon-left" ui-sref="app.vendors">
+	<i class="icon ion-search"></i>
+	Look For A Vendor
+        </a>
+        <div class="item item-divider">
+        </div>
+        <a class="item item-icon-left" ui-sref="app.login" ng-hide="isAuthenticated">
+	<i class="icon ion-log-in"></i>
+	Login
+        </a>
+        <a class="item item-icon-left" ng-click="logout()" ng-show="isAuthenticated">
+	<i class="icon ion-log-out"></i>
+	Logout
+        </a>
+        <a class="item item-icon-left" ui-sref="app.signup" ng-hide="isAuthenticated">
+	<i class="icon ion-compose"></i>
+	Sign up
+        </a>
+        <a class="item item-icon-left" ui-sref="app.hotdeals">
+	<i class="icon ion-ios-flame"></i>
+	Settings
+        </a>
+        <div class="item item-divider">
+        </div>
+        <a class="item item-icon-left">
+	<i class="icon ion-android-share-alt"></i>
+	Share
+        </a>
+        <a class="item item-icon-left">
+	<i class="icon ion-ios-people"></i>
+	Contact Us
+        </a>
+        <a class="item item-icon-left" href="#/home">
+	<i class="icon ion-ios-star"></i>
+	Feedback
+        </a>
+        
+        <a class="item item-icon-left" ui-sref="app.faq">
+	<i class="icon ion-help-circled"></i>
+	FAQ
+        </a>
+        <a class="item item-icon-left">
+	<i class="icon ion-android-star-half"></i>
+	Rate Us
+        </a>
+        
+      </div>
+      
+      
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

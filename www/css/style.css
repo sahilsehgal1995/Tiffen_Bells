@@ -1,0 +1,57 @@
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+/* Your app's CSS, go crazy, make it your own */
+
+
+.bar.bar-transparent {
+  background-image: none;
+  border: none;
+}
+
+
+.swipe-cards {
+  position: fixed;
+}
+
+.swipe-card {
+  -webkit-perspective: 500;
+  -webkit-backface-visibility: hidden;
+  display: inline-block;
+  position:relative;
+  -webkit-transform: scale(1,1);
+  margin-left:5%;
+  margin-right:10%;
+  margin-top:12%;
+  -webkit-animation-fill-mode: backwards;
+}
+
+.swipe-card .title {
+  font-weight: bold;
+}
+.swipe-card .image {
+  max-height: 100%;
+}
+.swipe-card .button {
+  border: none;
+}
+.swipe-card .image img {
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+}
+
+#footer .button {
+  color: #fff;
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0,0);
+  }
+  70% {
+    -webkit-transform: scale(1.2,1.2);
+  }
+  100% {
+    -webkit-transform: scale(1,1);
+  }
+}

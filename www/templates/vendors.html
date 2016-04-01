@@ -1,0 +1,35 @@
+<ion-view view-title="Vendors">
+  <ion-content has-header="true" style="background-image:url('img/backgroun.jpeg');"> 
+	
+    <div class="card" ng-repeat="vendor in vendors" ng-click="viewVendor($index)">
+
+      <div class="item text-left">
+	      <font size="5em" color=red>{{vendor.name}}</font>
+	      <p><a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star-half"></a>
+		 <a class="icon ion-android-star-outline"></a>
+		 &nbsp;<font style="font-size:1.5em; color:green;" ng-if="vendor.verified=='Yes'">
+		      Verified<input type="checkbox" ng-if="vendor.verified=='Yes'" ng-disabled="true" checked style="width: 30px; height:17px;">
+		      </font>
+	      </p>
+	    </div>
+      <div class="item-body">
+	<img class="full-image" ng-src="{{vendor.image}}">
+	<p>
+	{{vendor.summary}}
+	</p>
+	<p>
+	  <a href="#" class="subdued">{{vendor.likes}} Like</a>
+	  <a href="#" class="subdued">{{vendor.comments}} Comments</a>
+	</p>
+      </div>
+
+    </div>
+</ion-content>
+      
+</ion-view>
+
+
+<!--ng-repeat="card in cards"-->

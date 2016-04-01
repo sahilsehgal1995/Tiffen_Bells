@@ -1,0 +1,32 @@
+<ion-view view-title="Vendor Products">
+  <ion-content has-header="true" style="background-image:url('img/backgroun.jpeg');"> 
+    <a class="button button-large  button-bar" style="border-radius: 25px; border: 2px solid #DC143C; color:crimson; font-weight:900; font-size:1.3em;">{{vendorName}}</a>
+    <ion-scroll direction="x" style="white-space: nowrap; height:45px; margin-top:4px; background-color:#33cd5f;">
+    <button class="button button-small  button-balanced " ng-repeat="day in days" style="font-weight:900; margin-top:3px;border: 1px solid green; text-shadow: 0 0 2px #FF0000; margin-right:4px; font-size:1.5em; ">{{day}}
+	    </button>
+</ion-scroll>
+    <div class="list">
+	  <a class="item item-thumbnail-left" href="#" style="margin-top:4px; border-radius: 25px; border: 2px solid #DC143C;" ng-repeat="product in products">
+	    <img ng-src="{{product.image}}" style="border-radius: 15px; border: 2px solid green; transform:translateY(15px);">
+	    <h2 style="font-size:1.2em; color:#DC143C">
+	      {{product.name}}
+	      <i class="icon ion-ios-circle-filled" style="color:green;" ng-if="product.type == 'Veg'"></i>
+	      <i class="icon ion-ios-circle-filled" style="color:#DC143C;" ng-if="product.type == 'NonVeg'"></i>
+	    </h2>
+	    <h2>Meal Time: Lunch</h2> 
+	    <p style="white-space:normal;">
+	    Butter Chicken. Lacha Parrantha. Salad. Whisky
+	    &nbsp;<br>
+	    <button class="button button-small button-balanced " style="border-radius: 29px; font-weight:900; text-shadow: 0 0 2px #FF0000; font-size:1.5em;">Price: &nbsp;50
+	    </button>&nbsp;<button class="button button-small  button-balanced " style="border-radius: 29px; font-weight:900; text-shadow: 0 0 2px #FF0000; font-size:1.5em;" ng-click="AddToCart($index)">Order
+	    </button>
+	    </p>
+	    
+	  </a>
+    </div>
+</ion-content>
+      
+</ion-view>
+
+
+<!--ng-repeat="card in cards"-->

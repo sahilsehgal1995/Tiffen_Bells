@@ -1,0 +1,46 @@
+<ion-view view-title="Advance Booking">
+  <ion-content has-header="true" style="background-image:url('img/backgroun.jpeg');"> 
+<!-- <ion-content has-header="true" style="background-color: white;" drag-content="false"> -->
+    
+  <ion-scroll direction="x" style="white-space: nowrap;">
+    <div width=100%><!--
+      --><button class="button button-dark" ng-repeat="day in days" ng-click="button(1)" ng-style="{'width':'33%'}" ui-sref='apphome.menclothing.tshirts'>
+	{{day}}
+      </button>
+      </div>
+</ion-scroll>
+<swipe-cards on-card-swipe="onSwipe($event)">
+        <swipe-card ng-repeat="card in cards" style="margin-top:10px;" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+          <div ng-controller="CardCtrl" class="list card" style="width:100%; border-radius: 25px; border: 2px solid #73AD21; padding: 20px;">
+            <div class="item text-left" style="white-space:normal;">
+	      <font size="5" color=red>{{card.vender}}</font>
+	      <p><a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star"></a>
+		 <a class="icon ion-android-star-half"></a>
+		 <a class="icon ion-android-star-outline"></a>
+		 &nbsp;<font style="font-size:1.5em; color:green;">
+		      Verified<input type="checkbox" ng-disabled="true" checked style="width: 30px; height:17px;">
+		      </font>
+	      </p>
+	    </div>
+            <div class="title" style="margin-top:8px; word-wrap:inherit;">
+              {{card.title}}
+            </div>
+            <div class="image" style="margin-top:8px;">
+              <img ng-src="{{card.image}}" style="border-radius: 25px;">
+            </div>
+            <div class="button-bar">
+              <a class="button" style="border-radius: 25px; border: 2px solid #73AD21; font-weight:900; font-size:1.1em;">Price: {{card.price}}</a>
+              &nbsp;&nbsp;
+              <a class="button icon-right ion-chevron-right button-balanced" style="border-radius: 25px; border: 2px solid #73AD21; font-weight:900;" ng-click="AddToCart()">Order</a>
+            </div>
+          </div>
+        </swipe-card>
+    </swipe-cards>
+</ion-content>
+      
+</ion-view>
+
+
+<!--ng-repeat="card in cards"-->
